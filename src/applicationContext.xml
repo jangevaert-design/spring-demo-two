@@ -9,13 +9,24 @@
 
   <!-- Define your beans here -->
 
-  <bean id="myFortuneService"
+  <bean id="myFortune"
     class="edu.cnm.deepdive.HappyFortuneService">
   </bean>
 
   <bean id="myCoach"
-    class="edu.cnm.deepdive.BaseballCoach">
-    <constructor-arg ref="myFortuneService"/>
+    class="edu.cnm.deepdive.TrackCoach">
+    <constructor-arg ref="myFortune"/>
+  </bean>
+
+  <bean id="myFortuneService"
+    class="edu.cnm.deepdive.HappyFortuneService">
+
+  </bean>
+
+  <bean id="myCricketCoach"
+    class="edu.cnm.deepdive.CricketCoach">
+    <property name="fortuneService"
+      ref="myFortuneService"/>
   </bean>
 
 </beans>

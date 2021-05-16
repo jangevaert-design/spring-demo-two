@@ -2,6 +2,16 @@ package edu.cnm.deepdive;
 
 public class SwimCoach implements Coach {
 
+  private FortuneService fortuneService;
+
+  public SwimCoach(FortuneService theFortuneService) {
+    this.fortuneService = theFortuneService;
+  }
+
+  public SwimCoach() {
+
+  }
+
 
   @Override
   public String getDailyWorkout() {
@@ -10,6 +20,6 @@ public class SwimCoach implements Coach {
 
   @Override
   public String getDailyFortune() {
-    return null;
+    return fortuneService.getFortune();
   }
 }
