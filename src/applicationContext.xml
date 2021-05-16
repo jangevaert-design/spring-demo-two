@@ -27,6 +27,10 @@
     class="edu.cnm.deepdive.CricketCoach">
     <property name="fortuneService"
       ref="myFortuneService"/>
+    <property name="emailAddress"
+      value="thebestcoach@deepdive.cnm.edu"/>
+    <property name="team"
+      value="Sunrisers Hyderabad"/>
   </bean>
 
 </beans>
